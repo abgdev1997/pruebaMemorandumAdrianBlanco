@@ -1,0 +1,32 @@
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content {
+    padding: 20px
+}
+
+@media screen and (max-width: 600px) {
+  .cardGrid {
+    justify-content: center;
+  }
+}
+
+h1 {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 18px;
+  }
+}

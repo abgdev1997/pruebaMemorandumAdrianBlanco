@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.buttonsBox {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
