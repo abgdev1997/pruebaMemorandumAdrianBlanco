@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 40px;
+}
+
+.storeIcon {
+  width: 80px;
+  height: 30px;
+  margin-right: 40px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .storeIcon {
+    width: 70px;
+    height: 20px;
+    margin-right: 40px;
+  }
+}
+
+.footerText {
+  font-size: 14px;
+  margin-right: 40px;
+}

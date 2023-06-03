@@ -21,3 +21,18 @@
   outline: none;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
+
+.buttonDisabled {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #d19393;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  opacity: 0.5;
+}

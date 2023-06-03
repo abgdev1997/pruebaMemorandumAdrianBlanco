@@ -1,15 +1,39 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 150px;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  border: 1px solid rgb(180, 180, 180);
+  cursor: pointer;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card {
+  flex-basis: calc(15% - 10px);
+  flex-grow: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex-basis: 100%;
+  }
 }
 
 .card:hover {
   transform: translateY(-5px);
+  opacity: 0.7;
+  border: 1px solid white;
 }
 
 .image {

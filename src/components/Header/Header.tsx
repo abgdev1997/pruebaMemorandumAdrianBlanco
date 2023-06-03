@@ -1,17 +1,18 @@
 import React from 'react';
 import logo from '../../assets/logo-gray.png';
 import styles from './Header.module.css';
-import Button from '../Buttons/Button1/Button1';
+import Button from '../Buttons/Button1';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({page}:{page: "home" | "movie" | "series"}) => {
     const navigate = useNavigate();
+
   return (
     <header className={styles.header}>
-      <img src={logo} alt="Logo" className={styles.logo} />
+      <img data-cy="logo" src={logo} style={{cursor: "pointer"}} alt="Logo" className={styles.logo} onClick={() => navigate("/")}/>
       <div className={styles.buttonsBox}>
-        <Button text='Peliculas' onClick={() => navigate("/peliculas")}/>
-        <Button text='Series' onClick={() => navigate("/series")}/>
+        {(page === "home" || page === "series") && <Button dataCy="peliculasButton" text='Películas' onClick={() => navigate("/peliculas")}/>}
+        {(page === "home" || page === "movie") &&<Button dataCy="seriesButton" text='Series' onClick={() => navigate("/series")}/>}
       </div>
     </header>
   );
